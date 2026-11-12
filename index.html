@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Style | Moda urbana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="topbar">
+    NUEVA COLECCIÓN ✦ MODA PARA TODOS ✦ ESTILO Y COMODIDAD
+  </div>
+
+  <header class="header">
+
+    <a href="#inicio" class="logo">URBAN<span>STYLE.</span></a>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#hombres">Hombres</a>
+      <a href="#mujeres">Mujeres</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#ofertas">Ofertas</a>
+    </nav>
+
+    <button class="cart-header" id="openCart">
+      🛍 Carrito <b id="cartCount">0</b>
+    </button>
+
+  </header>
+
+  <main>
+
+    <!-- PORTADA -->
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-content">
+        <span class="eyebrow">VISTE A TU MANERA</span>
+
+        <h1>
+          TU ESTILO.<br>
+          TU ACTITUD.<br>
+          <span>TU MOMENTO.</span>
+        </h1>
+
+        <p>
+          Descubre prendas urbanas, casuales y deportivas.
+          Encuentra tu estilo y expresa quién eres.
+        </p>
+
+        <a href="#catalogo" class="orange-btn">
+          EXPLORAR COLECCIÓN →
+        </a>
+      </div>
+
+      <div class="hero-photo">
+        <!-- CAMBIA ESTA FOTO POR TU PORTADA -->
+        <img src="portada.jpeg" alt="Portada Urban Style">
+      </div>
+
+    </section>
+
+    <!-- COLECCIONES -->
+
+    <section class="section collections">
+
+      <div class="section-title">
+        <span>DESCUBRE TU ESTILO</span>
+        <h2>NUESTRAS COLECCIONES</h2>
+        <p>Prendas pensadas para cada momento de tu día.</p>
+      </div>
+
+      <div class="collection-grid">
+
+        <a href="#hombres" class="collection-card">
+          <img src="jogger hombre.jpeg" alt="Colección hombres">
+          <div class="collection-info">
+            <small>ESTILO MASCULINO</small>
+            <h3>HOMBRES</h3>
+            <p>Actitud en cada prenda.</p>
+            <span>VER COLECCIÓN →</span>
+          </div>
+        </a>
+
+        <a href="#mujeres" class="collection-card">
+          <img src="shorts.jpeg" alt="Colección mujeres">
+          <div class="collection-info">
+            <small>ESTILO FEMENINO</small>
+            <h3>MUJERES</h3>
+            <p>Comodidad y personalidad.</p>
+            <span>VER COLECCIÓN →</span>
+          </div>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- HOMBRES -->
+
+    <section class="section catalog-section" id="hombres">
+
+      <div class="section-title">
+        <span>COLECCIÓN MASCULINA</span>
+        <h2>MODA PARA HOMBRES</h2>
+        <p>Estilo urbano y ropa deportiva para todos los días.</p>
+      </div>
+
+      <div class="category-pills">
+        <span>CAMISETAS</span>
+        <span>PANTALONETAS</span>
+        <span>JOGGERS</span>
+        <span>CHAQUETAS</span>
+        <span>DEPORTIVO</span>
+      </div>
+
+      <div class="product-grid" id="menProducts"></div>
+
+    </section>
+
+    <!-- MUJERES -->
+
+    <section class="section catalog-section women-section" id="mujeres">
+
+      <div class="section-title">
+        <span>COLECCIÓN FEMENINA</span>
+        <h2>MODA PARA MUJERES</h2>
+        <p>Prendas casuales, modernas y deportivas.</p>
+      </div>
+
+      <div class="category-pills">
+        <span>VESTIDOS</span>
+        <span>SHORTS</span>
+        <span>CROP TOPS</span>
+        <span>LEGGINGS</span>
+        <span>CONJUNTOS</span>
+      </div>
+
+      <div class="product-grid" id="womenProducts"></div>
+
+    </section>
+
+    <!-- CATÁLOGO GENERAL -->
+
+    <section class="section all-catalog" id="catalogo">
+
+      <div class="section-title">
+        <span>ENCUENTRA TU PRENDA</span>
+        <h2>CATÁLOGO COMPLETO</h2>
+        <p>Filtra los productos según lo que estás buscando.</p>
+      </div>
+
+      <div class="filters">
+
+        <div>
+          <label for="genderFilter">Colección</label>
+          <select id="genderFilter">
+            <option value="todos">Todas</option>
+            <option value="hombre">Hombres</option>
+            <option value="mujer">Mujeres</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="categoryFilter">Categoría</label>
+          <select id="categoryFilter">
+            <option value="todos">Todas</option>
+            <option value="camisetas">Camisetas</option>
+            <option value="urbano">Urbano</option>
+            <option value="pantalonetas">Pantalonetas</option>
+            <option value="joggers">Joggers</option>
+            <option value="chaquetas">Chaquetas</option>
+            <option value="vestidos">Vestidos</option>
+            <option value="shorts">Shorts</option>
+            <option value="crop">Crop tops</option>
+            <option value="leggings">Leggings</option>
+            <option value="conjuntos">Conjuntos</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="sizeFilter">Talla</label>
+          <select id="sizeFilter">
+            <option value="todos">Todas</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="sortFilter">Precio</label>
+          <select id="sortFilter">
+            <option value="default">Destacados</option>
+            <option value="low">Menor precio</option>
+            <option value="high">Mayor precio</option>
+          </select>
+        </div>
+
+      </div>
+
+      <p class="results-count" id="resultsCount"></p>
+      <div class="product-grid" id="allProducts"></div>
+
+    </section>
+
+    <!-- OFERTAS -->
+
+    <section class="offer-section" id="ofertas">
+
+      <div>
+        <span>UNA SORPRESA PARA TI</span>
+        <h2>¡10% DE DESCUENTO!</h2>
+        <p>Utiliza nuestro código especial al realizar tu compra.</p>
+
+        <div class="coupon-display">
+          <strong>URBANO10</strong>
+          <button id="copyCoupon">COPIAR CÓDIGO</button>
+        </div>
+      </div>
+
+      <div class="offer-decoration">-10<span>%</span></div>
+
+    </section>
+
+    <!-- BENEFICIOS -->
+
+    <section class="benefits">
+
+      <div>
+        <span>👕</span>
+        <strong>MODA ACTUAL</strong>
+        <small>Estilos para todos.</small>
+      </div>
+
+      <div>
+        <span>📏</span>
+        <strong>VARIAS TALLAS</strong>
+        <small>Elige la tuya.</small>
+      </div>
+
+      <div>
+        <span>💬</span>
+        <strong>ATENCIÓN DIRECTA</strong>
+        <small>Por WhatsApp.</small>
+      </div>
+
+      <div>
+        <span>🛍️</span>
+        <strong>COMPRA FÁCIL</strong>
+        <small>Arma tu pedido.</small>
+      </div>
+
+    </section>
+
+    <!-- FINALIZAR COMPRA -->
+
+    <section class="section checkout-section" id="checkout">
+
+      <div class="section-title">
+        <span>ÚLTIMO PASO</span>
+        <h2>FINALIZA TU COMPRA</h2>
+        <p>Completa tus datos y envía tu pedido por WhatsApp.</p>
+      </div>
+
+      <form class="checkout-form" id="checkoutForm">
+
+        <label for="customerName">Nombre completo</label>
+        <input type="text" id="customerName"
+          placeholder="Escribe tu nombre" required minlength="3">
+
+        <label for="customerPhone">Número de teléfono</label>
+        <input type="tel" id="customerPhone"
+          placeholder="Tu número de contacto" required>
+
+        <label for="customerAddress">Dirección de entrega</label>
+        <input type="text" id="customerAddress"
+          placeholder="Tu dirección" required>
+
+        <label for="customerCity">Ciudad o municipio</label>
+        <input type="text" id="customerCity"
+          placeholder="Tu ciudad" required>
+
+        <label for="customerNotes">Observaciones</label>
+        <textarea id="customerNotes"
+          placeholder="Color u otras indicaciones (opcional)"></textarea>
+
+        <button type="submit" class="orange-btn full-btn">
+          ENVIAR PEDIDO A WHATSAPP →
+        </button>
+
+        <p class="form-note" id="formMessage">
+          Tu pedido se preparará para enviarlo por WhatsApp.
+        </p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- CARRITO -->
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-panel" id="cartPanel">
+
+    <div class="cart-title">
+      <h2>MI CARRITO 🛍️</h2>
+      <button id="closeCart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-bottom">
+
+      <div class="coupon-box">
+        <input type="text" id="couponInput"
+          placeholder="Código de descuento">
+        <button id="applyCoupon">APLICAR</button>
+      </div>
+
+      <p id="couponMessage"></p>
+
+      <div class="total-line">
+        <span>Subtotal</span>
+        <strong id="subtotal">$0</strong>
+      </div>
+
+      <div class="total-line discount-line">
+        <span>Descuento</span>
+        <strong id="discount">$0</strong>
+      </div>
+
+      <div class="total-line grand-total">
+        <span>TOTAL</span>
+        <strong id="total">$0</strong>
+      </div>
+
+      <button class="whatsapp-btn" id="goCheckout">
+        FINALIZAR COMPRA →
+      </button>
+
+    </div>
+
+  </aside>
+
+  <footer class="footer">
+
+    <a href="#inicio" class="logo">URBAN<span>STYLE.</span></a>
+
+    <p>Viste con actitud. Vive con estilo.</p>
+    <p>© 2026 Urban Style. Todos los derechos reservados.</p>
+
+    <a href="https://wa.me/573205810086"
+       target="_blank" rel="noopener">
+      CONTACTAR POR WHATSAPP
+    </a>
+
+  </footer>
+
+</body>
+</html>
